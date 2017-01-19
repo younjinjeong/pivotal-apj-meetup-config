@@ -3,10 +3,10 @@ spring:
     name: pivotal-apj-meetup-edge
 zuul:
   routes:
-    emc-forum-backend: /backend/**
-    emc-forum-repository: /repository/**
-    emc-forum-admin: /admin/**
-    emc-forum-frontend: /**
+    pivotal-apj-meetup-backend: /backend/**
+    pivotal-apj-meetup-repository: /repository/**
+    pivotal-apj-meetup-admin: /admin/**
+    pivotal-apj-meetup-frontend: /**
 eureka:
   client:
     serviceUrl:
