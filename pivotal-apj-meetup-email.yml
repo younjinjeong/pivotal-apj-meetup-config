@@ -1,22 +1,22 @@
 spring:
   application:
-    name: emc-forum-email
+    name: pivotal-apj-meetup-email
   cloud:
     stream:
       bindings:
         input:
           destination: email
           group: email-service
-  mail:
-    host: smtp.gmail.com
-    username: emcforum2016hk
-    password: PivotalCF
-    port: 587
-    test-connection: true
-    protocol: smtp
-    properties:
-      mail:
-        smtp.starttls.enable: true
+#  mail:
+#    host: smtp.gmail.com
+#    username: emcforum2016hk
+#    password: PivotalCF
+#    port: 587
+#    test-connection: true
+#    protocol: smtp
+#    properties:
+#      mail:
+#        smtp.starttls.enable: true
 
 email:
   reallySend: true
