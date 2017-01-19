@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: emc-forum-email
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: email
+          group: email-service
+  mail:
+    host: smtp.gmail.com
+    username: emcforum2016hk
+    password: PivotalCF
+    port: 587
+    test-connection: true
+    protocol: smtp
+    properties:
+      mail:
+        smtp.starttls.enable: true
+
+email:
+  reallySend: true
+  subject: Congratulations!
+  body: Congratulations! You have win the game in EMC forum 2016. You may present this email to the counter and receive a gift.
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.emc-forum-service-registry.credentials.uri}/eureka/
+  instance:
+    instanceId: ${vcap.application.application_uris[0]}:${vcap.application.instance_id}
+    hostname: ${vcap.application.application_uris[0]}
+    non-secure-port: 80
+    appname: ${vcap.application.application_name}
+

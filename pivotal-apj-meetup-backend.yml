@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: pivotal-apj-meetup-backend
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: email
+
+answer:
+  q1: d
+  q2: b
+  q3: b
+  q4: c
+  q5: b
+#  q6: a
+#  q7: a
+DrawSize:
+  size: 10
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.emc-forum-service-registry.credentials.uri}/eureka/
+  instance:
+    instanceId: ${vcap.application.application_uris[0]}:${vcap.application.instance_id}
+    hostname: ${vcap.application.application_uris[0]}
+    non-secure-port: 80
+    appname: ${vcap.application.application_name}
