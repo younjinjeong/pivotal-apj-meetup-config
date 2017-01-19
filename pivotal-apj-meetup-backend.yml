@@ -21,7 +21,7 @@ DrawSize:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${vcap.services.emc-forum-service-registry.credentials.uri}/eureka/
+      defaultZone: ${vcap.services.pivotal-apj-meetup-service-registry.credentials.uri}/eureka/
   instance:
     instanceId: ${vcap.application.application_uris[0]}:${vcap.application.instance_id}
     hostname: ${vcap.application.application_uris[0]}
