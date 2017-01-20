@@ -7,21 +7,21 @@ spring:
         input:
           destination: email
           group: email-service
-#  mail:
-#    host: smtp.gmail.com
-#    username: emcforum2016hk
-#    password: PivotalCF
-#    port: 587
-#    test-connection: true
-#    protocol: smtp
-#    properties:
-#      mail:
-#        smtp.starttls.enable: true
+  mail:
+    host: ${SPRING_MAIL_HOST}
+    username: ${SPRING_MAIL_USERNAME}
+    password: ${SPRING_MAIL_PASSWORD}
+    port: ${SPRING_MAIL_PORT}
+    test-connection: ${SPRING_MAIL_TEST_CONNECTION}
+    protocol: ${SPRING_MAIL_PROTOCOL}
+    properties:
+      mail:
+        smtp.starttls.enable: ${SPRING_MAIL_SSL_ENABLE}
 
 email:
   reallySend: true
   subject: Congratulations!
-  body: Congratulations! You have win the game in EMC forum 2016. You may present this email to the counter and receive a gift.
+  body: Congratulations! You have win the game in Pivotal Event! You may present this email to the counter and receive a gift.
 
 
 eureka:
