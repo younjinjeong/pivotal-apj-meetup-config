@@ -8,6 +8,17 @@ spring:
           destination: email
           group: email-service
 
+  mail:
+    host: ${SPRING_MAIL_HOST}
+    username: ${SPRING_MAIL_USERNAME}
+    password: ${SPRING_MAIL_PASSWORD}
+    port: ${SPRING_MAIL_PORT}
+    test-connection: ${SPRING_MAIL_TEST_CONNECTION}
+    protocol: ${SPRING_MAIL_PROTOCOL}
+    properties:
+      mail:
+        smtp.starttls.enable: ${SPRING_MAIL_SSL_ENABLE}
+
 email:
   reallySend: true
   subject: Congratulations!
