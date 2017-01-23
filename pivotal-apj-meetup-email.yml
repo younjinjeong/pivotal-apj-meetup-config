@@ -8,6 +8,9 @@ spring:
           destination: email
           group: email-service
 
+server:
+  port: ${port:8080}
+
 email:
   reallySend: true
   subject: Congratulations!
