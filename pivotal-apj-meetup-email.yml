@@ -8,14 +8,10 @@ spring:
           destination: email
           group: email-service
 
-server:
-  port: ${SERVER_PORT:8080}
-
 email:
   reallySend: true
   subject: Congratulations!
   body: Congratulations! You have win the game in Pivotal Event! You may present this email to the counter and receive a gift.
-
 
 eureka:
   client:
